@@ -1,145 +1,177 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>quocbahuynh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/39693803?v=4" type="image/png"></head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quoc Huynh's bio</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 15%;
+        width: 100wh;
+        color: #fff;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+      }
 
+      @-webkit-keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @-moz-keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .wrap {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .profile {
+        text-align: center;
+        color: #fff;
+      }
+      .photo {
+        border-radius: 50%;
+        width: 90px;
+      }
+      .profile_name {
+        font-weight: bold;
+        display: block;
+      }
+      .at {
+        font-size: 13px;
+      }
+      .links {
+        margin-top: 33px;
+      }
+      .links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .links ul li {
+        margin: 14px 0;
+      }
+      .link {
+        padding: 14px;
+        display: block;
+        border: 1px solid #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: ease all 0.3s;
+        color: #fff;
+      }
+      .link:hover {
+        opacity: 0.9;
+      }
+      .card {
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+      }
+      .card h3 {
+        margin: 0;
+        color: #202024;
+      }
+      .card p {
+        margin: 5px 0;
+        font-size: 13px;
+        color: #202024;
+      }
+      #src {
+        margin-top: 50px;
+      }
+      .fab,
+      .fas {
+        float: left;
+      }
+    </style>
+  </head>
   <body>
-    <div id="loading">
-      <div id="spinner"></div>
-    </div>
-    <div id="profile">
-      <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/39693803?v=4) center;"></div>
-      <div id="username"><span style="display:block;">Huỳnh Bá Quốc</span><a href="https://github.com/quocbahuynh">@quocbahuynh</a></div>
-      <div id="userbio" style="display: block;">Web developer for bullshit applications</div>
-      <div id="about">
-                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="https://www.facebook.com/baquoc.huynhh/">https://www.facebook.com/baquoc.huynhh/</a></span>
-                <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
-                <div class="socials">
-                <span style="display:none !important;"><a href="https://www.twitter.com/undefined" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.dribbble.com/undefined" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.linkedin.com/in/undefined/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.medium.com/@undefined/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
-                </div>
-                </div>
-    </div>
-    <div id="display">
-      <div id="work">
-        <h1>Work.</h1>
-        <div class="projects" id="work_section">
-                        <a href="https://github.com/quocbahuynh/quocbahuynh.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">quocbahuynh.github.io</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-  
-                        <a href="https://github.com/quocbahuynh/eos-quizlet" target="_blank">
-                        <section>
-                            <div class="section_title">eos-quizlet</div>
-                            <div class="about_section">
-                            <span style="display:block;">Mô phỏng EOS với Quizlet</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; EJS</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-            
-          </div>
+    <div class="wrap">
+      <div class="profile">
+        <img src="avata.jpg" class="photo" />
+        <span class="profile_name">Huỳnh Bá Quốc</span>
+        <span class="at">Bullshit Web Developer</span>
       </div>
-      <div id="forks" style="display:none;">
-        <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
-      </div>
-      <div id="blog_section">
-        <h1>Blog.</h1>
-        <div id="blogs"></div>
-      </div>
-      <div id="footer">
-        <a href="https://github.com/imfunniee" target="_blank">Made by me</a>
+      <div class="links">
+        <ul>
+          <li>
+            <a href="https://spiderum.com/nguoi-dung/quocbahuynh" class="link"><i class="fas fa-spider"></i>Spiderum</a>
+          </li>
+          <li>
+            <a href="https://dev.to/quocbahuynh" class="link"><i class="fab fa-dev"></i> Dev.to</a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCK4mAYG_QTyaK1ViZwQrLJw"
+              class="link"
+              ><i class="fab fa-youtube"></i> Youtube</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/baquoc.huynh._/" class="link"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/quocbahuynh" class="link"><i class="fab fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="#" class="link"
+              ><i class="fas fa-unlock-alt"></i> Onlyfans</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("blog.json", function(blog) {
-        blog = blog || [];
-        if (blog.length == 0) {
-          return (document.getElementById("blog_section").style.display =
-            "none");
-        }
-        for (var i = 0; i < blog.length; i++) {
-          $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-        }
-      }).fail(function() {
-        return (document.getElementById("blog_section").style.display = "none");
-      });
-    </script>
-
+    <center><p id="src">Made by me</p></center>
     <script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
-
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
-
-      $("document").ready(() => {
-        magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
+      document
+        .querySelector("body > div > div.links > ul > li:nth-child(5) > a")
+        .addEventListener("click", function () {
+          alert("Hey hey, Why do you think me like that?");
+        });
     </script>
-  
-
-</body></html>
+  </body>
+</html>
