@@ -1,0 +1,91 @@
+% File: handout.sty
+% 
+% Author: Nhat Bui (minhnhat@linuxmail.org)
+% Changes: 
+% v. beta
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{handout}[2021/06/25 Package for typeseting simple handout, version beta]
+
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumerate}
+
+\newcommand{\course}[2][\LARGE\vspace*{-1em}]{%
+	\def\coursecode{#1}\def\coursename{#2}\noindent%
+	\hspace*{\fill}{\bfseries\LARGE\coursecode\hspace*{\fill}\\}%
+	\begin{center}\vspace*{-2em}\bfseries\LARGE\coursename\end{center}%
+}
+\def\semes{\ }
+\newcommand{\semester}[1]{\def\semes{#1}}
+\newcommand{\headinfo}[1]{%
+	\hspace*{\fill}{\Large{#1}}\hspace*{\fill}\\
+}
+\newcommand{\announce}[1]{%
+	\vspace*{1em}\hrule%
+	\begin{center}
+		\raisebox{0.3em}{\huge\bf...}%
+		{\bf\Large\ {#1}\ }%
+		\raisebox{0.3em}{\huge\bf...}%
+	\end{center}
+	\hrule\vspace*{1em}%
+}
+\newcommand{\emphasize}[1]{
+	\begin{center}
+		\setlength{\fboxsep}{0.4em}
+		\noindent\Large\bf\framebox{%
+			{#1}%
+		}%
+	\end{center}
+}
+\fancypagestyle{firstpagefancy}{
+	\pagestyle{fancy}%
+	\fancyhead{}% Clear header
+	\renewcommand{\headrulewidth}{0pt}
+}
+\newcommand{\autoheader}{%
+	\pagestyle{fancy}
+	\thispagestyle{firstpagefancy}
+	\fancyhead[RE,LO]{\scriptsize\bf\coursecode}
+	\chead{\scriptsize\bf\coursename}
+	\fancyhead[RO, LE]{\scriptsize\bf\semes}
+	\cfoot{\small\thepage}
+}
+\newcommand{\header}[3]{
+	\pagestyle{fancy}
+	\thispagestyle{firstpagefancy}
+	\fancyhead[RE,LO]{\scriptsize\bf{#1}}
+	\chead{\scriptsize\bf{#2}}
+	\fancyhead[RO, LE]{\scriptsize\bf{#3}}
+}
+\newcommand{\hwnote}[1]{%
+	\vspace*{1em}\hrule\vspace*{1em}%
+	\noindent{\small{#1}}%
+	\vspace*{1em}\hrule\vspace*{1em}%
+}
+\newcommand{\name}[2]{
+	\def\fullname{#1}\def\id{#2}%
+	\noindent%
+	\begin{center}\Large%
+		\framebox{\parbox{0.5\textwidth}{
+				\begin{tabular}{r @\ l }
+					Name: & \fullname \hfill\vspace*{.3em}\\
+					ID: & \id \\
+		\end{tabular}}}
+	\end{center}\vspace*{1em}
+}
+
+\newcommand{\blanklines}[1]{
+	\vspace*{#1em}
+}
+\newenvironment{problem}
+{\vspace*{-\topsep}\begin{enumerate}[(a)]\setlength{\itemsep}{0pt}}
+	{\end{enumerate}}
+
+\newcommand{\myepigraph}[2]{%
+	\vspace*{1em}%
+	\hspace*{\fill}\begin{minipage}{0.7\textwidth}
+		\small\sffamily\textit{{#1}}\vspace{0.3em}\\
+		\hspace*{\fill}{--- #2}
+	\end{minipage}\vspace*{1em}
+}

@@ -1,0 +1,157 @@
+body {
+    font: 14px Roboto;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    color: #000;
+    background: #eee;
+    background-image: url(https://github.com/nhatwtf/nhatwtf.github.io/raw/main/assets/bg.png);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+a {
+  color: blue;
+  border-bottom: 1px dotted #333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  border-bottom: 1px dotted #333;
+  color: brown;
+}
+
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right; margin-left: 15px;
+}
+.clearfix:after, form:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.';
+}
+.container {
+    position: relative; width: 100%;
+    margin: 25px auto;
+}
+
+#content {
+    position: relative;
+    width: 420px;
+    margin: 0 auto;
+    padding: 25px 0 0;
+    text-align: center;
+    border: 1px solid #c4c6ca;
+    background: #fff;
+    border-radius: 8px;
+}
+
+#content h1 {
+    font: bold 26px Roboto, sans-serif;
+    line-height: 20px;
+    margin: 10px 0 30px;
+    color: #666;
+}
+
+
+/* FORM */
+
+#content form {
+    position: relative; ;
+    margin: 0 20px;
+}
+
+#content form input[type='text'],
+#content form input[type='password'] {
+    font: 12px Roboto, sans-serif;
+    width: 80%;
+    margin: 0 0 10px;
+    padding: 15px 10px 15px 15px;
+    color: #555;
+    background: #f0f0f0;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.15);
+    font-family: inherit;
+}
+
+#content form input[type='text']:focus,
+#content form input[type='password']:focus {
+    border: 1px solid #eb6;
+    outline: none;
+    background-color: #fff;
+
+}
+
+#username {
+    background-position: 10px 10px !important;
+}
+
+#password {
+    background-position: 10px -53px !important;
+}
+
+
+#content form input[type='submit'] {
+    font: bold 15px Roboto, sans-serif;
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 35px;
+    margin: 20px 0 35px 15px;
+    cursor: pointer;
+    
+    color: #851;
+    border: 1px solid #da4;
+    border-radius: 14px;
+    background: rgb(254,226,145); /* Thanks to cssgradient.io hehe*/
+    background: linear-gradient(180deg, rgba(254,226,145,1) 0%, rgba(253,187,45,1) 100%); 
+}
+
+#content form input[type='submit']:hover {
+    background: #fd7;
+}
+
+#content form div a { /* this dude forgets his password */
+    font-size: 12px;
+    float: right;
+    margin: 30px 15px 0 0;
+}
+
+.fa {
+    margin-left: -35px;
+    color: #666;
+}
+
+#close-button {
+  background: rgba(0, 0, 0, 0);
+  color: #f35;
+  border: 1px solid #f35;
+  border-radius: 25%;
+  cursor: pointer;
+  padding: 2px 5px;
+  outline: none;
+  position: absolute;
+  top: -25px;
+  right: -8px;
+}
+

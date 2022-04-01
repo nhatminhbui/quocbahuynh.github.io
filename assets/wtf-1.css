@@ -1,0 +1,117 @@
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.3466e0ec.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.ea8d19db.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.a357677a.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.8d0a45cc.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.10e93738.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.7eb7d0f7.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.c21e63c5.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.effa986f.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.ce8ef887.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+body {
+    font-family: "Circular", sans-serif;
+    font-size: 13pt;
+    color: #fff;
+    background: #131313;
+    background-image: url("dark-bg.png");
+    background-repeat: repeat-x;
+  	background-attachment: fixed;
+  	background-size: contain; 
+    padding-top: 34px;
+    padding-bottom: 34px;
+    cursor: context-menu;
+}
+
+.wrap {
+    padding-bottom: 34px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.profile {
+    text-align: center;
+    color: #fff;
+}
+
+#avatar {
+    width: 114px;
+    border-radius: 50%;
+}
+
+#profile-name {
+    font-size: 21pt;
+    font-weight: 900;
+    display: block;
+    position: relative; 
+    margin-top: 13px;
+}
+
+#profile-name:hover {
+  transition: 0.5s ease;
+}
+
+.sec {
+    font-size: 16pt;
+    font-weight: 700;
+    display: block;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.links {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.butt {
+    cursor: pointer;
+    padding: 13px;
+    height: 30px;
+    border: 1px solid red;
+    margin-top: 13px;
+    display: block;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.title {
+    color: #000;
+    background: #fff;
+    width: 340px;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.subtitle {
+    color: rgb(200,200,114);
+    text-align: right;
+    background: green;
+}
+
+
+
+#signature {
+    width: 55px;
+}

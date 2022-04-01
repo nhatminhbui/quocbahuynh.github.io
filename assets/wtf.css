@@ -1,0 +1,155 @@
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.3466e0ec.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.ea8d19db.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.a357677a.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.8d0a45cc.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.10e93738.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.7eb7d0f7.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.c21e63c5.woff2") format("woff2"), url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.effa986f.woff") format("woff"),
+        url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.ce8ef887.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    min-height:100%;
+}
+
+body {
+    font-family: "Circular", sans-serif;
+    font-size: 13pt;
+    color: #fff;
+    background: #131313;
+    cursor: context-menu;
+}
+
+.wrap {
+    padding-bottom: 34px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+.links {
+    padding-bottom: 55px;
+    position: relative;
+    background: #131313;
+}
+
+
+.butt {
+    padding: 13px;
+    height: 34px; line-height: 34px;
+    border: 1.6px solid #131313;
+    background: #222;
+    border-radius: 21px;
+    margin-bottom: 13px;
+    margin-left: 21px;
+    margin-right: 21px;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-columns: 30px auto auto;
+    gap: 13px;
+    z-index: 5;
+    
+    transition: 0.5s;
+}
+
+.butt:hover {
+    background: #131313;
+    border: 1.6px solid #fff;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    justify-self: self-start;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    justify-self: center;
+    text-overflow: ellipsis;
+}
+
+.subtitle {
+    color: rgb(114, 114, 114);
+    text-align: right;
+    position: absolute;
+    justify-self: self-end;
+}
+
+
+/* for large devices */
+@media only screen and (min-width: 481px) {
+
+    .profile {
+        text-align: center;
+        color: #fff;
+        margin-top: 34px;
+        margin-bottom: 89px;
+    }
+
+    #avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    #bio-text-wrap {
+        margin: 21px;
+    }
+
+    #profile-name {
+        font-size: 21pt;
+        font-weight: 900;
+        line-height: 96%;
+    }
+    #description {
+        margin-top: 8px;
+        font-size: 8pt;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #aaa;
+    }
+
+}
+
+/* ----- footer ----- */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+/* here i try to center my signature
+i don't know why but it works like a charm */
+#signature {
+    width: 55px;
+    margin: 36px;
+    display: block;
+    position: relative;
+    left: -50%;
+}

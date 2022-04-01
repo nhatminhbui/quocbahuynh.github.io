@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/wtf.css">
+    <link rel="stylesheet" type="text/css" href="assets/mobile.css">
+    <title>Nhat Bui</title>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+	  		$("[data-link]").click(function() {
+				window.location.href = $(this).attr("data-link");
+				return false;
+	  		});
+		});
+	</script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="profile">
+            <img id="avatar" src="baby.jpg">
+            <div id="bio-text-wrap">
+		        <div id="profile-name">Fabrizio Romano</div>
+		        <div id="description">lorem ipsum dolor sit amet</div>
+		    </div>
+		    <span id="dark-layer"></span>
+		    <span id="shadow"></span>
+        </div>
+       
+
+        
+       <div class="links">
+        
+				<div class="butt" data-link="https://twitter.com/nhatwtf/">
+   				    <img class="icon" src="assets/twitter.svg">
+					<div class="title">Twitter</div>
+					<div class="subtitle">@nhatwtf</div>
+				</div>
+				<div class="butt" data-link="https://instagram.com/nhatwtf/">
+   				    <img class="icon" src="assets/instagram.svg">
+					<div class="title">Instagram</div>
+					<div class="subtitle">@nhatwtf</div>
+				</div>				
+				<div class="butt" data-link="https://github.com/nhatminhbui/">
+   				    <img class="icon" src="assets/github.svg">
+					<div class="title">Github</div>
+					<div class="subtitle">nhatminhbui</div>
+				</div>	
+    </div> 
+</body>
+</html>
